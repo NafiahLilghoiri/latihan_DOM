@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kumpulan Latihan JavaScript</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f7fa;
+      color: #2c3e50;
+    }
+    header {
+      background: linear-gradient(135deg, #3498db, #2ecc71);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .container {
+    font-family: 'Times New Roman', Times, serif;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+    h2 {
+      color: #2980b9;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #3498db;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #2c82c9;
+    }
+    input {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+    .box-demo {
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px dashed #ccc;
+      border-radius: 6px;
+      display: inline-block;
+      min-width: 120px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <img id="myImage" src="https://polije.ac.id/wp-content/uploads/elementor/thumbs/Logo-branding-pfusa8almjxsbc0o2751zoe6089pc40ms8rkv5mgw.png" width="200">
+      <script>
+        document.getElementById("myImage").src = "https://kesehatan.polije.ac.id/img/kesehatan/polijelogo.png";
+      </script>
+  <header><h1>❤️Selamat Datang❤️</h1></header>
+  <div class="container">
+
+    <!-- Contoh 2 -->
+    <div class="card">
+      <h2>Contoh 2: Ubah Warna Teks</h2>
+      <h1 id="id1">POLIJE SIIIP</h1>
+      <button type="button" onclick="document.getElementById('id1').style.color = 'pink'">Click !!!</button>
+    </div>
+
+    <!-- Contoh 3 -->
+    <div class="card">
+      <h2>Contoh 3: Ubah Isi Teks dengan JS</h2>
+      <p id="p1">Hello World!</p>
+      <script>
+        document.getElementById("p1").innerHTML = "Bapak Saiful Anwar";
+      </script>
+      <p><i>Kata di atas sudah berubah otomatis</i></p>
+    </div>
+
+    <!DOCTYPE html>
+  <html>
+    <body>
+        <script>
+            document.write(Date());
+        </script>
+    </body>
+  </html>
+
+    <!-- Contoh 4 -->
+    <div class="card">
+      <h2>Contoh 4: Validasi Input</h2>
+      <p>Masukkan Nilai antara 1 sampai 9:</p>
+      <input id="num">
+      <button type="button" onclick="myFunction()">Submit</button>
+      <p id="demo"></p>
+      <script>
+        function myFunction() {
+          let x = document.getElementById("num").value;
+          let text;
+          if (isNaN(x) || x < 1 || x > 9) {
+            text = "Input OK";
+          } else {
+            text = "Input not valid";
+          }
+          document.getElementById("demo").innerHTML = text;
+        }
+      </script>
+    </div>
+
+    <!-- Contoh 5 -->
+    <div class="card">
+      <h2>Contoh 5: Event Onclick</h2>
+      <h3 onclick="this.innerHTML = 'Ooops!'">Click Disini!</h3>
+    </div>
+
+    <!-- Contoh 6 -->
+    <div class="card">
+      <h2>Contoh 6: Panggil Fungsi</h2>
+      <h3 onclick="changeText(this)">Click Disini!</h3>
+      <script>
+        function changeText(id) {
+          id.innerHTML = "Hallo!";
+        }
+      </script>
+    </div>
+
+    <!-- Contoh 7 -->
+    <div class="card">
+      <h2>Contoh 7: Tampilkan Tanggal</h2>
+      <p>Click the button to display the date.</p>
+      <button onclick="displayDate()">The time is?</button>
+      <p id="demo7"></p>
+      <script>
+        function displayDate() {
+          document.getElementById("demo7").innerHTML = Date();
+        }
+      </script>
+    </div>
+
+    <!-- Contoh 8 -->
+    <div class="card">
+      <h2>Contoh 8: Uppercase Input</h2>
+      Masukkan Nama (huruf kecil):
+      <input type="text" id="fname" onchange="upperCase()">
+      <script>
+        function upperCase() {
+          const x = document.getElementById("fname");
+          x.value = x.value.toUpperCase();
+        }
+      </script>
+    </div>
+
+    <!-- Contoh 9 -->
+    <div class="card">
+      <h2>Contoh 9: Onclick Button</h2>
+      <button id="myBtn9">Click!!!</button>
+      <p id="demo9"></p>
+      <script>
+        document.getElementById("myBtn9").onclick = function() {
+          document.getElementById("demo9").innerHTML = Date();
+        }
+      </script>
+    </div>
+
+    <!-- Contoh 10 -->
+    <div class="card">
+      <h2>Contoh 10: Onload Event</h2>
+      <p><i>Hai! Keluarga besar POLIJE</i></p>
+      <script>
+        window.onload = function() {
+          alert("Hai Keluarga besar POLIJE");
+        }
+      </script>
+    </div>
+
+    <!-- Contoh 11 -->
+    <div class="card">
+      <h2>Contoh 11: Mouse Over & Out</h2>
+      <div onmouseover="mOver(this)" onmouseout="mOut(this)" class="box-demo" style="background:#38d9b3;">
+        Mouse Over Me
+      </div>
+      <script>
+        function mOver(obj) {
+          obj.innerHTML = "Thank You";
+        }
+        function mOut(obj) {
+          obj.innerHTML = "Mouse Over Me";
+        }
+      </script>
+    </div>
+
+    <!-- Contoh 12 -->
+    <div class="card">
+      <h2>Contoh 12: Mouse Down & Up</h2>
+      <div onmousedown="mDown(this)" onmouseup="mUp(this)" class="box-demo" style="background:#38d99e;">
+        Click Me
+      </div>
+      <script>
+        function mDown(obj) {
+          obj.style.backgroundColor = "#1ec5e5";
+          obj.innerHTML = "Release Me";
+        }
+        function mUp(obj) {
+          obj.style.backgroundColor = "#D94A38";
+          obj.innerHTML = "Thank You";
+        }
+      </script>
+    </div>
+
+    <!-- Contoh 13 -->
+    <div class="card">
+      <h2>Contoh 13: Mouse Over Change Color</h2>
+      <h3 onmouseover="style.color='blue'" onmouseout="style.color='black'">
+        Mouse over this text
+      </h3>
+    </div>
+
+    <!-- Contoh 14 -->
+    <div class="card">
+      <h2>Contoh 14: addEventListener()</h2>
+      <button id="btn14">Click !!!</button>
+      <p id="demo14"></p>
+      <script>
+        document.getElementById("btn14").addEventListener("click", function() {
+          document.getElementById("demo14").innerHTML = Date();
+        });
+      </script>
+    </div>
+
+    <!-- Contoh 15 -->
+    <div class="card">
+      <h2>Contoh 15: addEventListener dengan Alert</h2>
+      <button id="btn15">Buka</button>
+      <script>
+        document.getElementById("btn15").addEventListener("click", function() {
+          alert("I LOVE YOU");
+        });
+      </script>
+    </div>
+
+    <!-- Contoh 16 -->
+    <div class="card">
+      <h2>Contoh 16: addEventListener Memanggil Fungsi</h2>
+      <button id="btn16">Buka</button>
+      <script>
+        document.getElementById("btn16").addEventListener("click", myFunction16);
+        function myFunction16() {
+          alert("I MISS YOU");
+        }
+      </script>
+    </div>
+
+  </div>
+</body>
+</html>
